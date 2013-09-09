@@ -1,0 +1,12 @@
+# Datatypes (KEYWORD1)
+
+# Methods and Functions (KEYWORD2)
+read KEYWORD2
+getInternal KEYWORD2
+getExternal KEYWORD2
+isShortedToVcc() KEYWORD2
+isShortedToGnd() KEYWORD2
+isOpen() KEYWORD2
+hasError() KEYWORD2
+
+# Constants (LITERAL1)
