@@ -1,5 +1,5 @@
 /*
-Read temperatures from multiple Thermocouple Nanoshields.
+ Read temperatures from multiple Thermocouple Nanoshields.
  
  Copyright (c) 2013 Circuitar
  This software is released under the MIT license. See the attached LICENSE file for details.
@@ -8,10 +8,13 @@ Read temperatures from multiple Thermocouple Nanoshields.
 #include "Nanoshield_Thermocouple.h"
 
 // Use 6 thermocouples simultaneously
-#define THERMOCOUPLES 6
+#define THERMOCOUPLES 4
 
 // Create an array of thermocouples
 Nanoshield_Thermocouple thermocouple[THERMOCOUPLES];
+
+// Define the CS pin for each thermocouple
+int cs[] = { 6, 7, 8, 9 };
 
 void setup()
 {
@@ -23,7 +26,7 @@ void setup()
 
   // Initialize each Thermocouple Nanoshield, selecting the corresponding CS pin
   for(int i = 0; i < THERMOCOUPLES; i++) {
-    thermocouple[i].begin(i + 5);
+    thermocouple[i].begin(cs[i]);
   }
 }
 
@@ -57,5 +60,3 @@ void loop()
   // Wait for next second
   delay(1000);
 }
-
-
