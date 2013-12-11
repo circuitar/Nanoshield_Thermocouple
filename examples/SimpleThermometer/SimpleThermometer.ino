@@ -17,7 +17,9 @@ void setup()
   Serial.println("-------------------------------");
   Serial.println("");
 
-  // Initialize thermocouple
+  // Initialize the thermocouple
+	// The CS pin can be passed as a parameter if different than pin D8,
+	//  e.g. thermocouple.begin(7)
   thermocouple.begin();
 }
 
@@ -27,6 +29,10 @@ void loop()
   thermocouple.read();
 
   // Print temperature in the serial port, checking for errors
+  Serial.print("Internal: ");
+  Serial.print(thermocouple.getInternal());
+
+  Serial.print(" | External: ");
   if (thermocouple.isShortedToVcc()) {
     Serial.println("Shorted to VCC");
   } 
@@ -37,13 +43,10 @@ void loop()
     Serial.println("Open circuit");
   } 
   else {
-    Serial.print(thermocouple.getExternal());
-    Serial.print(", ");
-    Serial.println(thermocouple.getInternal());
+    Serial.println(thermocouple.getExternal());
   }
 
   // Wait for next second
   delay(1000);
 }
-
 
