@@ -18,8 +18,8 @@ void setup()
   Serial.println("");
 
   // Initialize the thermocouple
-	// The CS pin can be passed as a parameter if different than pin D8,
-	//  e.g. thermocouple.begin(7)
+  // The CS pin can be passed as a parameter if different than pin D8,
+  //  e.g. thermocouple.begin(7)
   thermocouple.begin();
 }
 
