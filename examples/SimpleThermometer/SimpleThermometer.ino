@@ -35,14 +35,11 @@ void loop()
   Serial.print(" | External: ");
   if (thermocouple.isShortedToVcc()) {
     Serial.println("Shorted to VCC");
-  } 
-  else if (thermocouple.isShortedToGnd()) {
+  } else if (thermocouple.isShortedToGnd()) {
     Serial.println("Shorted to GND");
-  } 
-  else if (thermocouple.isOpen()) {
+  } else if (thermocouple.isOpen()) {
     Serial.println("Open circuit");
-  } 
-  else {
+  } else {
     Serial.println(thermocouple.getExternal());
   }
 

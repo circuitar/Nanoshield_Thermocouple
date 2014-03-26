@@ -7,14 +7,11 @@
 #include <SPI.h>
 #include "Nanoshield_Thermocouple.h"
 
-// Use 6 thermocouples simultaneously
-#define THERMOCOUPLES 4
+// Define the CS pin for each thermocouple
+byte cs[] = { 6, 7, 8, 9 };
 
 // Create an array of thermocouples
-Nanoshield_Thermocouple thermocouple[THERMOCOUPLES];
-
-// Define the CS pin for each thermocouple
-int cs[] = { 6, 7, 8, 9 };
+Nanoshield_Thermocouple thermocouple[sizeof(cs)];
 
 void setup()
 {
@@ -25,14 +22,14 @@ void setup()
   Serial.println("");
 
   // Initialize each Thermocouple Nanoshield, selecting the corresponding CS pin
-  for(int i = 0; i < THERMOCOUPLES; i++) {
+  for(int i = 0; i < sizeof(cs); i++) {
     thermocouple[i].begin(cs[i]);
   }
 }
 
 void loop()
 {
-  for(int i = 0; i < THERMOCOUPLES; i++) {
+  for(int i = 0; i < sizeof(cs); i++) {
     // Read thermocouple data
     thermocouple[i].read();
     
@@ -43,18 +40,15 @@ void loop()
     // Print temperature in the serial port, checking for errors
     if (thermocouple[i].isShortedToVcc()) {
       Serial.println("Shorted to VCC");
-    } 
-    else if (thermocouple[i].isShortedToGnd()) {
+    } else if (thermocouple[i].isShortedToGnd()) {
       Serial.println("Shorted to GND");
-    } 
-    else if (thermocouple[i].isOpen()) {
+    } else if (thermocouple[i].isOpen()) {
       Serial.println("Open circuit");
-    } 
-    else {
+    } else {
       Serial.print(thermocouple[i].getExternal());
-      Serial.print(", ");
-      Serial.println(thermocouple[i].getInternal());
     }
+    Serial.print(", ");
+    Serial.println(thermocouple[i].getInternal());
   }
 
   // Wait for next second
