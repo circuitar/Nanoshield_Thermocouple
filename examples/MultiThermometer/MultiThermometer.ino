@@ -39,17 +39,18 @@ void loop()
   
     // Print temperature in the serial port, checking for errors
     if (thermocouple[i].isShortedToVcc()) {
-      Serial.println("Shorted to VCC");
+      Serial.print("Shorted to VCC");
     } else if (thermocouple[i].isShortedToGnd()) {
-      Serial.println("Shorted to GND");
+      Serial.print("Shorted to GND");
     } else if (thermocouple[i].isOpen()) {
-      Serial.println("Open circuit");
+      Serial.print("Open circuit");
     } else {
       Serial.print(thermocouple[i].getExternal());
     }
     Serial.print(", ");
     Serial.println(thermocouple[i].getInternal());
   }
+  Serial.println();
 
   // Wait for next second
   delay(1000);

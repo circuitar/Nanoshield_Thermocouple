@@ -32,6 +32,7 @@ void Nanoshield_Thermocouple::begin(uint8_t cs)
 void Nanoshield_Thermocouple::read()
 {
 	uint32_t data = 0;
+	uint16_t rawTemp = 0;
 
 	// Select the chip
 	digitalWrite(csPin, LOW);
@@ -44,16 +45,24 @@ void Nanoshield_Thermocouple::read()
 	// Deselect the chip
 	digitalWrite(csPin, HIGH);
 	
-	// Get internal temperature from data
-	intTemp = ((data & 0x7FF0) >> 4) * 0.0625;
-	if (data & 0x8000) {
-		intTemp = -intTemp - 0.0625;
+	// Get 12-bit signed internal temperature from data
+	rawTemp = (data & 0xFFF0) >> 4;
+	if (rawTemp & 0x800) {
+		// Negative temperature (two's complement)
+		intTemp = -((4096 - rawTemp) * 0.0625);
+	} else {
+		// Positive temperature
+		intTemp = rawTemp * 0.0625;
 	}
 	
-	// Get external temperature from data
-	extTemp = ((data & 0x7FFC0000) >> 18) * 0.25;
-	if (data & 0x80000000) {
-		extTemp = -extTemp - 0.25;
+	// Get 14-bit signed external temperature from data
+	rawTemp = (data & 0xFFFC0000) >> 18;
+	if (rawTemp & 0x2000) {
+		// Negative temperature (two's complement)
+		extTemp = -((16384 - rawTemp) * 0.25);
+	} else {
+		// Positive temperature
+		extTemp = rawTemp * 0.25;
 	}
 	
 	// Get errors from data
