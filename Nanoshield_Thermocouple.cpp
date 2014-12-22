@@ -5,8 +5,6 @@ Copyright (c) 2013 Circuitar
 This software is released under the MIT license. See the attached LICENSE file for details.
 */
 
-#include "Arduino.h"
-#include <SPI.h>
 #include "Nanoshield_Thermocouple.h"
 
 Nanoshield_Thermocouple::Nanoshield_Thermocouple() {

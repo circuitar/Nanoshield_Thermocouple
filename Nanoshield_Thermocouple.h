@@ -8,7 +8,12 @@ This software is released under the MIT license. See the attached LICENSE file f
 #ifndef NANOSHIELD_THERMOCOUPLE_h
 #define NANOSHIELD_THERMOCOUPLE_h
 
-#include "Arduino.h"
+#ifdef ARDUPI
+	#include "arduPi.h"
+#else
+	#include "Arduino.h"
+	#include <SPI.h>
+#endif
 
 class Nanoshield_Thermocouple {
 	public:
