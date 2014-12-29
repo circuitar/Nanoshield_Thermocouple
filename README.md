@@ -8,7 +8,7 @@ This is used to read the internal and external temperatures from the Thermocoupl
 To install, just copy it under &lt;arduinosketchfolder&gt;/libraries/
 
 ---
-
-Copyright (c) 2013 Circuitar
+Copyright (c) 2013 Circuitar  
+All rights reserved.
 
 This software is released under an MIT license. See the attached LICENSE file for details.
