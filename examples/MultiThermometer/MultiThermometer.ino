@@ -8,7 +8,7 @@
 #include "Nanoshield_Thermocouple.h"
 
 // Define the CS pin for each thermocouple
-byte cs[] = { 6, 7, 8, 9 };
+byte cs[] = { 4, 7, 8, 10, A3 };
 
 // Create an array of thermocouples
 Nanoshield_Thermocouple thermocouple[sizeof(cs)];
