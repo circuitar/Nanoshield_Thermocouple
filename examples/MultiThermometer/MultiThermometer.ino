@@ -15,7 +15,7 @@ Nanoshield_Thermocouple thermocouple[sizeof(cs)];
 
 void setup()
 {
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.println("------------------");
   Serial.println(" MultiThermometer");
   Serial.println("------------------");
