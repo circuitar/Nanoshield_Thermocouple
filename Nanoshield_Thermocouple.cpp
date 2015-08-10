@@ -1,9 +1,10 @@
-/*
-This is the library to access the Thermocouple Nanoshield
-
-Copyright (c) 2013 Circuitar
-This software is released under the MIT license. See the attached LICENSE file for details.
-*/
+/**
+ * @file Nanoshield_Thermovouple.cpp
+ * This is the library to access the Thermocouple Nanoshield
+ * 
+ * Copyright (c) 2013 Circuitar
+ * This software is released under the MIT license. See the attached LICENSE file for details.
+ */
 
 #include "Nanoshield_Thermocouple.h"
 
