@@ -36,6 +36,7 @@ class Nanoshield_Thermocouple {
 
 		/**
 		 * @brief Reads internal and external temperatures.
+		 * 
 		 * @see getInternal()
 		 * @see getExternal()
 		 * @see hasError()
@@ -44,6 +45,7 @@ class Nanoshield_Thermocouple {
 
 		/**
 		 * @brief Gets the last internal temperature read.
+		 * 
 		 * @return The last internal temperature read.
 		 * @see read()
 		 */
@@ -51,6 +53,7 @@ class Nanoshield_Thermocouple {
 
 		/**
 		 * @brief Gets the last external temperature read.
+		 * 
 		 * @return The last external temperature read.
 		 * @see read()
 		 */
@@ -58,26 +61,39 @@ class Nanoshield_Thermocouple {
 
 		/**
 		 * @brief Checks if is shorted to VCC.
+		 * 
+		 * The sensor is connected to VCC.
+		 * 
 		 * @return True if shorted to VCC. False otherwise.
 		 */
 		bool isShortedToVcc();
 
 		/**
 		 * @brief Checks if is shorted to GND.
+		 * 
+		 * The sensor is connected to GND.
+		 * 
 		 * @return True if shorted to GND. False otherwise.
 		 */
 		bool isShortedToGnd();
 
 		/**
 		 * @brief Checks if open circuit.
+		 * 
+		 * The sensor circuit is open.
+		 * 
 		 * @return Ture if open circuit. False otherwise.
 		 */
 		bool isOpen();
 
 		/**
 		 * @brief Checks if there are errors.
+		 * 
 		 * @return True if any of shoted to VCC, shorted to GND or open circuit
 		 *         errors occurred. False if no errors.
+		 * @see isShortedToVcc()
+		 * @see isShortedToGnd()
+		 * @see isOpen()
 		 */
 		bool hasError();
 
