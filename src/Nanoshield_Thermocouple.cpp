@@ -1,5 +1,5 @@
 /**
- * @file Nanoshield_Thermovouple.cpp
+ * @file Nanoshield_Thermocouple.cpp
  * This is the library to access the Thermocouple Nanoshield
  * 
  * Copyright (c) 2013 Circuitar
