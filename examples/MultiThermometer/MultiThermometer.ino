@@ -1,8 +1,9 @@
-/*
- Read temperatures from multiple Thermocouple Nanoshields.
- 
- Copyright (c) 2013 Circuitar
- This software is released under the MIT license. See the attached LICENSE file for details.
+/**
+ * @file MultiThermometer.ino
+ * Read temperatures from multiple Thermocouple Nanoshields.
+ * 
+ * Copyright (c) 2013 Circuitar
+ * This software is released under the MIT license. See the attached LICENSE file for details.
  */
 #include <SPI.h>
 #include "Nanoshield_Thermocouple.h"

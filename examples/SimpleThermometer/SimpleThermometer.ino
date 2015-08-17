@@ -1,8 +1,9 @@
-/*
-This a simple serial port thermometer application using the Thermocouple Nanoshield.
- 
- Copyright (c) 2013 Circuitar
- This software is released under the MIT license. See the attached LICENSE file for details.
+/**
+ * @file SimpleThermometer.ino
+ * This a simple serial port thermometer application using the Thermocouple Nanoshield.
+ * 
+ * Copyright (c) 2013 Circuitar
+ * This software is released under the MIT license. See the attached LICENSE file for details.
  */
 #include <SPI.h>
 #include "Nanoshield_Thermocouple.h"
