@@ -5,7 +5,7 @@ This is the Arduino software library to access the Thermocouple Nanoshield (MAX3
 
 * Source code: https://github.com/circuitar/Nanoshield_Thermocouple
 * Documentation: http://nanoshield-thermocouple.readthedocs.org/
-* Reference board: `Termopar Nanoshield`_ from Circuitar_.
+* Reference board: `Termopar Nanoshield 1.2`_ from Circuitar_.
 
 Library features include:
 
@@ -22,7 +22,7 @@ The following examples_ are provided:
 - MultiThermometer_ read temperature from multiple Thermocouple Nanoshields.
 - SimpleThermometer_ simple serial port thermometer application.
 
-.. _`Termopar Nanoshield`: https://www.circuitar.com/nanoshields/modules/termopar/
+.. _`Termopar Nanoshield 1.2`: https://www.circuitar.com/nanoshields/modules/termopar12/
 .. _Circuitar: https://www.circuitar.com/
 .. _examples: https://github.com/circuitar/Nanoshield_Thermocouple/tree/master/examples
 .. _MultiThermometer: https://github.com/circuitar/Nanoshield_Thermocouple/blob/master/examples/MultiThermometer/MultiThermometer.ino
