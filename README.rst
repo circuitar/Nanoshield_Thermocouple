@@ -22,8 +22,8 @@ The following examples_ are provided:
 - MultiThermometer_ read temperature from multiple Thermocouple Nanoshields.
 - SimpleThermometer_ simple serial port thermometer application.
 
-.. _`Termopar Nanoshield 1.2`: https://www.circuitar.com/nanoshields/modules/termopar12/
-.. _Circuitar: https://www.circuitar.com/
+.. _`Termopar Nanoshield 1.2`: https://www.circuitar.com.br/nanoshields/modulos/termopar12/
+.. _Circuitar: https://www.circuitar.com.br/
 .. _examples: https://github.com/circuitar/Nanoshield_Thermocouple/tree/master/examples
 .. _MultiThermometer: https://github.com/circuitar/Nanoshield_Thermocouple/blob/master/examples/MultiThermometer/MultiThermometer.ino
 .. _SimpleThermometer: https://github.com/circuitar/Nanoshield_Thermocouple/blob/master/examples/SimpleThermometer/SimpleThermometer.ino
